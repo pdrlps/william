@@ -29,11 +29,11 @@
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIColor whiteColor], NSForegroundColorAttributeName,
-      [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f], NSFontAttributeName,nil]];
+      [UIFont fontWithName:@"GillSans-Light" size:16.0f], NSFontAttributeName,nil]];
     
     
     UIBarButtonItem *barButtonItem = [UIBarButtonItem appearance];
-    [barButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Thin" size:16.0f]} forState:UIControlStateNormal];
+    [barButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"GillSans-Light" size:16.0f]} forState:UIControlStateNormal];
     
     UIViewController *viewController = [[LOPListViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];

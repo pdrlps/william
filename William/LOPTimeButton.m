@@ -51,7 +51,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:self.circleView];
-        self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12.0f];
+        self.titleLabel.font = [UIFont fontWithName:@"GillSans" size:12.0f];
         self.titleLabel.adjustsFontSizeToFitWidth = YES;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
 

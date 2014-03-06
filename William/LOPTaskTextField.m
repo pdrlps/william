@@ -17,7 +17,7 @@
         self.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.1f];
         self.returnKeyType = UIReturnKeyGo;
         self.placeholder = @"Do this";
-        self.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:16.0f];
+        self.font = [UIFont fontWithName:@"GillSans-Light" size:16.0f];
         self.textColor = [UIColor whiteColor];
         self.textAlignment = NSTextAlignmentLeft;
         self.tintColor = [UIColor whiteColor];

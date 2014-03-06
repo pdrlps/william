@@ -76,7 +76,7 @@
         [self.contentView addSubview:self.timeButton];
         self.backgroundColor = [UIColor clearColor];
         
-        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:16.0f];
+        self.textLabel.font = [UIFont fontWithName:@"GillSans-Light" size:16.0f];
         
         UIView *view = [[UIView alloc] init];
         view.backgroundColor = [UIColor colorWithRed:0.61 green:0.71 blue:0.53 alpha:1];

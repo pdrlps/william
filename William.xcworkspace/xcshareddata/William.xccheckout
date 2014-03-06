@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>04877971-83F5-4D80-98F7-3412B2B98FA4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>William</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F1FB9422-12D2-4731-B8DD-A66BB3631946</key>
+		<string>https://github.com/pdrlps/william.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>William.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F1FB9422-12D2-4731-B8DD-A66BB3631946</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pdrlps/william.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F1FB9422-12D2-4731-B8DD-A66BB3631946</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F1FB9422-12D2-4731-B8DD-A66BB3631946</string>
+			<key>IDESourceControlWCCName</key>
+			<string>William</string>
+		</dict>
+	</array>
+</dict>
+</plist>
