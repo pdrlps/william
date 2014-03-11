@@ -10,7 +10,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>FooterText</key>
-			<string>William To-do list is an open-source project.</string>
+			<string>William To-do list is a basic task list manager focusing on simplicity and ease-of-use.</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

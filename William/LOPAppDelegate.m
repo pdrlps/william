@@ -8,10 +8,13 @@
 
 #import "LOPAppDelegate.h"
 #import "LOPListViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation LOPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Crashlytics startWithAPIKey:@"23fc3a72601974bf2932492e8609d82c6ca052fc"];
+    
     application.statusBarStyle = UIStatusBarStyleLightContent;
     
     UIScreen *screen = [UIScreen mainScreen];

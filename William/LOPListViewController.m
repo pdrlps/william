@@ -12,6 +12,7 @@
 #import "LOPTaskTextField.h"
 #import "LOPDurationPickerViewController.h"
 #import "LOPTimeButton.h"
+#import <Crashlytics/Crashlytics.h>
 
 // CocoaPods
 #import <SAMGradientView/SAMGradientView.h>

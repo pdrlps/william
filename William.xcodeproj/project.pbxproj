@@ -29,6 +29,7 @@
 		409306C118A19E6A005A1B18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 409306BF18A19E6A005A1B18 /* InfoPlist.strings */; };
 		409306C318A19E6A005A1B18 /* WilliamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409306C218A19E6A005A1B18 /* WilliamTests.m */; };
 		409306D118A24F15005A1B18 /* LOPListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409306D018A24F15005A1B18 /* LOPListViewController.m */; };
+		40CC405318CFC19E0071242C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CC405218CFC19E0071242C /* Crashlytics.framework */; };
 		A7DD611F910241898A6D61C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AD1065D41B4E9786EC2222 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		409306C218A19E6A005A1B18 /* WilliamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilliamTests.m; sourceTree = "<group>"; };
 		409306CF18A24F15005A1B18 /* LOPListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPListViewController.h; sourceTree = "<group>"; };
 		409306D018A24F15005A1B18 /* LOPListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPListViewController.m; sourceTree = "<group>"; };
+		40CC405218CFC19E0071242C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		94AD1065D41B4E9786EC2222 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				4093069E18A19E6A005A1B18 /* CoreData.framework in Frameworks */,
 				4093069C18A19E6A005A1B18 /* UIKit.framework in Frameworks */,
 				4093069818A19E6A005A1B18 /* Foundation.framework in Frameworks */,
+				40CC405318CFC19E0071242C /* Crashlytics.framework in Frameworks */,
 				A7DD611F910241898A6D61C2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +168,7 @@
 		4093069618A19E6A005A1B18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40CC405218CFC19E0071242C /* Crashlytics.framework */,
 				4093069718A19E6A005A1B18 /* Foundation.framework */,
 				4093069918A19E6A005A1B18 /* CoreGraphics.framework */,
 				4093069B18A19E6A005A1B18 /* UIKit.framework */,
@@ -228,6 +232,7 @@
 				4093069118A19E6A005A1B18 /* Frameworks */,
 				4093069218A19E6A005A1B18 /* Resources */,
 				25CAB74D13A34618B9294A8F /* Copy Pods Resources */,
+				40CC405118CFC1670071242C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -329,6 +334,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		40CC405118CFC1670071242C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 23fc3a72601974bf2932492e8609d82c6ca052fc 3a11607248c779e4a111054ed8195bf2bfc65d48efdb3e4e636d8a05b6fa32e1";
 		};
 		C66AB79FE3984C8B90E41F0F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -478,6 +496,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pedrolopes/Dropbox/Software/iOS/William\\ iOS/William",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "William/William-Prefix.pch";
 				INFOPLIST_FILE = "William/William-Info.plist";
@@ -493,6 +515,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pedro Lopes (98WHGTLA84)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pedrolopes/Dropbox/Software/iOS/William\\ iOS/William",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "William/William-Prefix.pch";
 				INFOPLIST_FILE = "William/William-Info.plist";

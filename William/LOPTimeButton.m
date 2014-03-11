@@ -143,7 +143,6 @@
     [self setTitle:nil forState:UIControlStateNormal];
     [self setImage:[UIImage imageNamed:@"clock"] forState:UIControlStateNormal];
     self.circleView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.04f];
-    
 }
 
 @end
