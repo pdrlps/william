@@ -6,11 +6,11 @@
 	<array>
 		<dict>
 			<key>Title</key>
-			<string>Open Source</string>
+			<string>William</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>FooterText</key>
-			<string>William To-do list is a basic task list manager focusing on simplicity and ease-of-use.</string>
+			<string>William To-do list is a basic task list manager focusing on simplicity and ease-of-use. More information at http://pedrolopes.net/william.</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

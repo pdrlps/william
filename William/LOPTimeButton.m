@@ -7,6 +7,8 @@
 //
 
 #import "LOPTimeButton.h"
+#import "LOPFunctions.h"
+#import <AudioToolbox/AudioServices.h>
 
 @interface LOPTimeButton()
 
@@ -51,7 +53,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:self.circleView];
-        self.titleLabel.font = [UIFont fontWithName:@"GillSans" size:12.0f];
+        self.titleLabel.font = [LOPFunctions preferredGillSansSmallFontForTextStyle:[[UIApplication sharedApplication] preferredContentSizeCategory]];
         self.titleLabel.adjustsFontSizeToFitWidth = YES;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
 
@@ -118,6 +120,10 @@
             } else {
                 self.circleView.backgroundColor = [UIColor colorWithRed:0.64 green:0.27 blue:0.27 alpha:1];
             }
+            
+            if([self.time integerValue] == 0) {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+            }
         } else {
             NSMutableString *text = [[NSMutableString alloc] init];
             
@@ -132,7 +138,11 @@
                 [text appendFormat:@"%.0fh", floorf(timeInterval / 60 / 60)];
             }
             title = text;
-            self. circleView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.16f];
+            if (timeInterval < 0) {
+               self.circleView.backgroundColor = [UIColor colorWithRed:0.64 green:0.27 blue:0.27 alpha:1];
+            } else {
+                self. circleView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.16f];
+            }
         }
         
         [self setTitle:title forState:UIControlStateNormal];

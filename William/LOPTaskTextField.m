@@ -7,6 +7,7 @@
 //
 
 #import "LOPTaskTextField.h"
+#import "LOPFunctions.h"
 
 @implementation LOPTaskTextField
 
@@ -16,8 +17,8 @@
     if (self) {
         self.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.1f];
         self.returnKeyType = UIReturnKeyGo;
-        self.placeholder = @"Do this";
-        self.font = [UIFont fontWithName:@"GillSans-Light" size:16.0f];
+        self.placeholder = @"Do this!";
+        self.font = [LOPFunctions preferredGillSansFontForTextStyle:[[UIApplication sharedApplication] preferredContentSizeCategory]];
         self.textColor = [UIColor whiteColor];
         self.textAlignment = NSTextAlignmentLeft;
         self.tintColor = [UIColor whiteColor];

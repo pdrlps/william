@@ -7,7 +7,7 @@
 //
 
 #import "LOPDurationPickerViewController.h"
-
+#import "LOPFunctions.h"
 #import <SAMGradientView/SAMGradientView.h>
 
 @interface LOPDurationPickerViewController ()
@@ -30,7 +30,7 @@
         _quote = [[UILabel alloc] init];
         _quote.numberOfLines = 0;
         _quote.textAlignment = NSTextAlignmentCenter;
-        _quote.font = [UIFont fontWithName:@"GillSans-LightItalic" size:16.0f];
+        _quote.font = [LOPFunctions preferredGillSansItalicFontForTextStyle:[[UIApplication sharedApplication] preferredContentSizeCategory]];
         _quote.textColor = [UIColor whiteColor];
     }
     

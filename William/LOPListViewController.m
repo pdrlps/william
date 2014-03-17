@@ -12,6 +12,7 @@
 #import "LOPTaskTextField.h"
 #import "LOPDurationPickerViewController.h"
 #import "LOPTimeButton.h"
+#import "LOPFunctions.h"
 #import <Crashlytics/Crashlytics.h>
 
 // CocoaPods
@@ -97,7 +98,8 @@
         }
     }
     
-
+    // look for font size changes
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userTextSizeDidChange:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -125,6 +127,27 @@
 
 
 # pragma mark - Actions
+
+-(void)userTextSizeDidChange:(id)sender {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSArray *loadedTasks = [userDefaults arrayForKey:@"tasks"];
+    self.tasks = [[NSMutableArray alloc] initWithArray:loadedTasks];
+    
+    loadedTasks = [userDefaults arrayForKey:@"completedTasks"];
+    self.completedTasks = [[NSMutableArray alloc] initWithArray:loadedTasks];
+    
+    [self.tableView reloadData];
+    
+    for (NSInteger i = 0; i < self.tasks.count; i++) {
+        NSDictionary *task = self.tasks[i];
+        if(task[@"startedTimingAt"]) {
+            [self startTimingIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            break;
+        }
+    }
+
+    
+}
 
 -(void)toggleEdit:(id) sender {
     
@@ -272,6 +295,10 @@
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LOPTaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    // update fonts
+    cell.textLabel.font = [LOPFunctions preferredGillSansFontForTextStyle:[[UIApplication sharedApplication] preferredContentSizeCategory]];
+    cell.timeButton.titleLabel.font = [LOPFunctions preferredGillSansFontForTextStyle:[[UIApplication sharedApplication] preferredContentSizeCategory]];
     
 	[cell.editGestureRecognizer addTarget:self action:@selector(editTask:)];
 	[cell.timeButton addTarget:self action:@selector(time:withEvent:) forControlEvents:UIControlEventTouchUpInside];

@@ -8,6 +8,7 @@
 
 #import "LOPTaskTableViewCell.h"
 #import "LOPTimeButton.h"
+#import "LOPFunctions.h"
 
 @implementation LOPTaskTableViewCell
 
@@ -75,9 +76,7 @@
     if((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
         [self.contentView addSubview:self.timeButton];
         self.backgroundColor = [UIColor clearColor];
-        
-        self.textLabel.font = [UIFont fontWithName:@"GillSans-Light" size:16.0f];
-        
+        self.textLabel.font = [LOPFunctions preferredGillSansFontForTextStyle:[[UIApplication sharedApplication] preferredContentSizeCategory]];
         UIView *view = [[UIView alloc] init];
         view.backgroundColor = [UIColor colorWithRed:0.61 green:0.71 blue:0.53 alpha:1];
         

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4035F3E618C8E85A000E3A9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4035F3E518C8E85A000E3A9B /* Settings.bundle */; };
 		4036765E18AD1548007B03F6 /* LOPTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4036765D18AD1548007B03F6 /* LOPTaskTableViewCell.m */; };
+		403EA86918D3D94300076E91 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403EA86818D3D94300076E91 /* AudioToolbox.framework */; };
+		403EA86C18D3E42400076E91 /* LOPFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EA86B18D3E42400076E91 /* LOPFunctions.m */; };
 		40668E1E18B27B2500635976 /* LOPEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40668E1D18B27B2500635976 /* LOPEditViewController.m */; };
 		40668E2118B2959500635976 /* LOPTaskTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 40668E2018B2959500635976 /* LOPTaskTextField.m */; };
 		407FF39D18C5EEE300EC6CB8 /* LOPDurationPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407FF39C18C5EEE300EC6CB8 /* LOPDurationPickerViewController.m */; };
@@ -48,6 +50,9 @@
 		4035F3E518C8E85A000E3A9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4036765C18AD1548007B03F6 /* LOPTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPTaskTableViewCell.h; sourceTree = "<group>"; };
 		4036765D18AD1548007B03F6 /* LOPTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPTaskTableViewCell.m; sourceTree = "<group>"; };
+		403EA86818D3D94300076E91 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		403EA86A18D3E42400076E91 /* LOPFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPFunctions.h; sourceTree = "<group>"; };
+		403EA86B18D3E42400076E91 /* LOPFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPFunctions.m; sourceTree = "<group>"; };
 		40668E1C18B27B2400635976 /* LOPEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPEditViewController.h; sourceTree = "<group>"; };
 		40668E1D18B27B2500635976 /* LOPEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPEditViewController.m; sourceTree = "<group>"; };
 		40668E1F18B2959500635976 /* LOPTaskTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPTaskTextField.h; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403EA86918D3D94300076E91 /* AudioToolbox.framework in Frameworks */,
 				4093069A18A19E6A005A1B18 /* CoreGraphics.framework in Frameworks */,
 				4093069E18A19E6A005A1B18 /* CoreData.framework in Frameworks */,
 				4093069C18A19E6A005A1B18 /* UIKit.framework in Frameworks */,
@@ -120,6 +126,8 @@
 		407FF3A118C64C7200EC6CB8 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				403EA86A18D3E42400076E91 /* LOPFunctions.h */,
+				403EA86B18D3E42400076E91 /* LOPFunctions.m */,
 				409306CF18A24F15005A1B18 /* LOPListViewController.h */,
 				409306D018A24F15005A1B18 /* LOPListViewController.m */,
 				407FF39B18C5EEE300EC6CB8 /* LOPDurationPickerViewController.h */,
@@ -168,6 +176,7 @@
 		4093069618A19E6A005A1B18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				403EA86818D3D94300076E91 /* AudioToolbox.framework */,
 				40CC405218CFC19E0071242C /* Crashlytics.framework */,
 				4093069718A19E6A005A1B18 /* Foundation.framework */,
 				4093069918A19E6A005A1B18 /* CoreGraphics.framework */,
@@ -375,6 +384,7 @@
 				407FF3A918C791FD00EC6CB8 /* LOPTimeButton.m in Sources */,
 				409306D118A24F15005A1B18 /* LOPListViewController.m in Sources */,
 				40668E1E18B27B2500635976 /* LOPEditViewController.m in Sources */,
+				403EA86C18D3E42400076E91 /* LOPFunctions.m in Sources */,
 				4036765E18AD1548007B03F6 /* LOPTaskTableViewCell.m in Sources */,
 				40668E2118B2959500635976 /* LOPTaskTextField.m in Sources */,
 				407FF39D18C5EEE300EC6CB8 /* LOPDurationPickerViewController.m in Sources */,
